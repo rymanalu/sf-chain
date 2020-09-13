@@ -6,6 +6,10 @@ class Block {
     this.data = data;
   }
 
+  static genesis() {
+    return new this('Genesis time', '-----', 'f1r57-h45h', []);
+  }
+
   toString() {
     return `Block -
       Timestamp: ${this.timestamp}
