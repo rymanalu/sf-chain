@@ -13,13 +13,13 @@ describe('Transaction', () => {
 
   it('outputs the `amount` subtracted from the wallet balance', () => {
     expect(
-      transaction.output.find(output => output.address === wallet.publicKey).amount
+      transaction.outputs.find(output => output.address === wallet.publicKey).amount
     ).toEqual(wallet.balance - amount);
   });
 
   it('outputs the `amount` added to the recipient', () => {
     expect(
-      transaction.output.find(output => output.address === recipient).amount
+      transaction.outputs.find(output => output.address === recipient).amount
     ).toEqual(amount);
   });
 
