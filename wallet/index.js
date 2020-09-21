@@ -66,7 +66,7 @@ class Wallet {
       if (transaction.input.timestamp > startTime) {
         transaction.outputs.find(o => {
           if (o.address === this.publicKey) {
-            balance += output.amount;
+            balance += o.amount;
           }
         });
       }
